@@ -34,31 +34,31 @@
         <div class='flex w-full content-center justify-between pt-2 lg:w-1/2 lg:justify-end lg:pt-0'>
           <ul class='list-reset flex flex-1 items-center justify-center lg:flex-none h-12'>
             <% if admin_signed_in? %>
-              <li class='no-underline'>
-                <div class="flex items-center justify-center">
-                  <div class="relative inline-block text-left dropdown">
-                    <button class="inline-flex justify-center w-full px-4 py-2 text-sm font-medium leading-5 text-gray-700 transition duration-150 ease-in-out  rounded-md" type="button" aria-haspopup="true" aria-expanded="true" aria-controls="headlessui-menu-items-117">
-                      <svg class="h-6 w-6" id="dropdownDividerButton" data-dropdown-toggle="dropdownDivider" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
-                        <path fill="white" d="M288 320a224 224 0 1 0 448 0 224 224 0 1 0-448 0zm544 608H160a32 32 0 0 1-32-32v-96a160 160 0 0 1 160-160h448a160 160 0 0 1 160 160v96a32 32 0 0 1-32 32z">
-                        </path>
-                      </svg>
-                    </button>
-                    <div class="opacity-0 invisible dropdown-menu transition-all duration-300 transform origin-top-right -translate-y-2 scale-95">
-                      <div class="absolute right-0 w-56 mt-2 origin-top-right bg-white border border-gray-200 divide-y divide-gray-100 rounded-md shadow-lg outline-none" aria-labelledby="headlessui-menu-button-1" id="headlessui-menu-items-117" role="menu">
-                        <div class="px-4 py-3">         
-                          <p class="text-sm leading-5">Signed in as</p>
-                          <p class="text-sm font-medium leading-5 text-gray-900 truncate"><%= current_admin.email %></p>
-                        </div>
-                        <div class="py-1">
-                          <%= link_to destroy_admin_session_path, data: { turbo_method: :delete }, class: "text-gray-700 flex justify-between w-full px-4 py-2 text-sm leading-5 text-left" do %>
-                            Sign out
-                          <% end %>
+                <li class='no-underline'>
+                  <div class="flex items-center justify-center">
+                    <div class="relative inline-block text-left dropdown">
+                      <button class="inline-flex justify-center w-full px-4 py-2 text-sm font-medium leading-5 text-gray-700 transition duration-150 ease-in-out  rounded-md" type="button" aria-haspopup="true" aria-expanded="true" aria-controls="headlessui-menu-items-117">
+                        <svg class="h-6 w-6" id="dropdownDividerButton" data-dropdown-toggle="dropdownDivider" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+                          <path fill="white" d="M288 320a224 224 0 1 0 448 0 224 224 0 1 0-448 0zm544 608H160a32 32 0 0 1-32-32v-96a160 160 0 0 1 160-160h448a160 160 0 0 1 160 160v96a32 32 0 0 1-32 32z">
+                          </path>
+                        </svg>
+                      </button>
+                      <div class=" dropdown-menu transition-all duration-300 transform origin-top-right -translate-y-2 scale-95">
+                        <div class="absolute right-0 w-56 mt-2 origin-top-right bg-white border border-gray-200 divide-y divide-gray-100 rounded-md shadow-lg outline-none" aria-labelledby="headlessui-menu-button-1" id="headlessui-menu-items-117" role="menu">
+                          <div class="px-4 py-3">         
+                            <p class="text-sm leading-5">Signed in as</p>
+                            <p class="text-sm font-medium leading-5 text-gray-900 truncate"><%= current_admin.email %></p>
+                          </div>
+                          <div class="py-1">
+                            <%= link_to destroy_admin_session_path, data: { turbo_method: :delete }, class: "text-gray-700 flex justify-between w-full px-4 py-2 text-sm leading-5 text-left" do %>
+                              Sign out
+                            <% end %>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </li>
+                </li>
             <% elsif customer_signed_in? %>
               <li class='no-underline'>
                 <div class="flex items-center justify-center">
@@ -69,7 +69,7 @@
                         </path>
                       </svg>
                     </button>
-                    <div class="opacity-0 invisible dropdown-menu transition-all duration-300 transform origin-top-right -translate-y-2 scale-95">
+                    <div class=" dropdown-menu transition-all duration-300 transform origin-top-right -translate-y-2 scale-95">
                       <div class="absolute right-0 w-56 mt-2 origin-top-right bg-white border border-gray-200 divide-y divide-gray-100 rounded-md shadow-lg outline-none" aria-labelledby="headlessui-menu-button-1" id="headlessui-menu-items-117" role="menu">
                         <div class="px-4 py-3">         
                           <p class="text-sm leading-5">Signed in as</p>
